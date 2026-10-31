@@ -1,0 +1,182 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    --font-serif: 'Fraunces', Georgia, serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', 'Cascadia Code', Consolas, monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #F5F5F7;
+    color: #1D1D1F;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.font-editorial {
+  font-family: var(--font-serif);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.apple-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.035);
+}
+
+.apple-glass {
+  background-color: rgba(255, 255, 255, 0.78);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+.omni-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.omni-btn-primary {
+  background-color: #0071E3;
+  color: #FFFFFF;
+  padding: 0.375rem 0.875rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.omni-btn-primary:hover {
+  background-color: #0077ED;
+}
+.omni-btn-primary:active {
+  transform: scale(0.98);
+}
+
+.omni-btn-subtle {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #1D1D1F;
+  padding: 0.375rem 0.75rem;
+}
+.omni-btn-subtle:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.omni-btn-subtle:active {
+  transform: scale(0.98);
+}
+
+.omni-btn-icon {
+  padding: 0.375rem;
+  border-radius: 0.5rem;
+  color: #424245;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.omni-btn-icon:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+  color: #1D1D1F;
+}
+
+.omni-input {
+  width: 100%;
+  font-size: 0.75rem;
+  color: #1D1D1F;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  transition: all 0.15s ease;
+  outline: none;
+}
+.omni-input:hover {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+.omni-input:focus {
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 2px #0071E3;
+}
+
+.omni-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  background-color: #F5F5F7;
+  font-size: 0.75rem;
+  color: #1D1D1F;
+  transition: all 0.15s ease;
+}
+
+.omni-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.625rem;
+  font-weight: 600;
+  padding: 0.0625rem 0.375rem;
+  border-radius: 0.25rem;
+}
+
+.omni-badge-important {
+  background-color: #FEF3C7;
+  color: #B45309;
+}
+
+.omni-sidebar-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.375rem 0.625rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+  color: #1D1D1F;
+}
+.omni-sidebar-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.omni-sidebar-item-active {
+  background-color: #0071E3;
+  color: #FFFFFF;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.omni-sidebar-item-active:hover {
+  background-color: #0071E3;
+}
+
+.omni-toast {
+  position: fixed;
+  top: 4rem;
+  right: 1.5rem;
+  z-index: 50;
+  padding: 0.625rem 1rem;
+  border-radius: 1rem;
+  background-color: rgba(29, 29, 31, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 500;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}

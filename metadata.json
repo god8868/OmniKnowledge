@@ -1,0 +1,6 @@
+{
+  "name": "OmniKnowledge Windows 本地全格式知识库",
+  "description": "面向 Windows 的本地多模态知识库系统，支持全格式图片、文档、音视频、代码及公众号/视频号/社交平台内容采集、预览、标签化、双向交叉引用、知识图谱、本地向量检索、异地同步与内嵌浏览器。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
